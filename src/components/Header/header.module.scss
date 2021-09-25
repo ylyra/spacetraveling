@@ -1,1 +1,14 @@
-// TODO
+.headerContentContainer {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  height: 6.5625rem;
+
+  > section {
+    max-width: 720px;
+    margin: 0 auto;
+    height: 6.5625rem;
+    display: flex;
+    align-items: center;
+  }
+}
