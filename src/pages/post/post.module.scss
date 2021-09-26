@@ -1,1 +1,113 @@
-// TODO
+.postContentContainer {
+  header {
+    height: 400px;
+    position: relative;
+    margin-bottom: 5rem;
+  }
+}
+
+.mainContainer {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+
+  h1 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 3.625rem;
+
+    letter-spacing: -0.5px;
+
+    color: var(--heading);
+    margin-bottom: 1.5rem;
+  }
+
+  article {
+    h2 {
+      font-family: Inter;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 2.25rem;
+      line-height: 3.125rem;
+      margin-bottom: 3.125rem;
+      margin-top: 4rem;
+
+      text-align: justify;
+
+      color: var(--heading);
+    }
+
+    .postContent {
+      font-family: Inter;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.125rem;
+      line-height: 1.5625rem;
+
+      text-align: justify;
+
+      color: var(--body);
+
+      p,
+      ul,
+      pre,
+      code {
+        margin: 1.5rem 0;
+      }
+
+      ul {
+        padding-left: 1.5rem;
+
+        li {
+          margin: 0.5rem 0;
+        }
+      }
+
+      a {
+        color: var(--highlight);
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      pre,
+      code {
+        font: 400 1rem 'Roboto', sans-serif;
+        background: var(--gray-700);
+        padding: 2px 5px;
+        border-radius: 0.25rem;
+      }
+
+      pre {
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+}
+
+.postInfos {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  time,
+  span {
+    display: flex;
+    align-items: center;
+    color: var(--info);
+    gap: 0.5rem;
+
+    > svg path {
+      stroke: currentColor;
+    }
+  }
+}
+
+.loading {
+  color: var(--info);
+  text-align: center;
+}
