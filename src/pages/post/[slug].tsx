@@ -84,18 +84,19 @@ const Post: NextPage<PostProps> = ({ post, preview, prevPost, nextPost }) => {
               {calculateReadingTime(post.data.content)} min
             </span>
           </div>
-          {post.last_publication_date !== post.first_publication_date && (
-            <p className={styles.editedTime}>
-              * editado em{' '}
-              {format(
-                new Date(post.last_publication_date),
-                "dd MMM yyyy', às' H:mm",
-                {
-                  locale: ptBR,
-                }
-              )}
-            </p>
-          )}
+          {post.last_publication_date &&
+            post.last_publication_date !== post.first_publication_date && (
+              <p className={styles.editedTime}>
+                * editado em{' '}
+                {format(
+                  new Date(post.last_publication_date),
+                  "dd MMM yyyy', às' H:mm",
+                  {
+                    locale: ptBR,
+                  }
+                )}
+              </p>
+            )}
 
           {post.data.content.map(content => {
             return (
@@ -208,7 +209,7 @@ export const getStaticProps: GetStaticProps<PostProps> = async ({
     prevPostResponse !== undefined
       ? {
           slug: `/post/${prevPostResponse.uid}`,
-          title: prevPostResponse.data.title,
+          title: prevPostResponse.data?.title,
         }
       : null;
 
@@ -216,7 +217,7 @@ export const getStaticProps: GetStaticProps<PostProps> = async ({
     nextPostResponse !== undefined
       ? {
           slug: `/post/${nextPostResponse.uid}`,
-          title: prevPostResponse.data.title,
+          title: nextPostResponse.data?.title,
         }
       : null;
 
