@@ -4,6 +4,16 @@
     position: relative;
     margin-bottom: 5rem;
   }
+
+  hr {
+    border: 0;
+    border-top: 1px solid var(--body);
+
+    opacity: 0.1;
+
+    margin-top: 3.75rem;
+    margin-bottom: 3rem;
+  }
 }
 
 .mainContainer {
@@ -110,4 +120,50 @@
 .loading {
   color: var(--info);
   text-align: center;
+}
+
+.editedTime {
+  margin-top: 1rem;
+
+  font-style: italic;
+  font-weight: normal;
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
+
+  color: var(--info);
+}
+
+.postsLinks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+
+  a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .title {
+      font-size: 1.125rem;
+      line-height: 1.375rem;
+
+      letter-spacing: -0.5px;
+
+      color: var(--heading);
+    }
+
+    .postType {
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.1875rem;
+      letter-spacing: -0.5px;
+
+      color: var(--highlight);
+    }
+
+    &:nth-child(2) {
+      text-align: right;
+    }
+  }
 }

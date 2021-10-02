@@ -62,3 +62,23 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.preview-mode {
+  a {
+    display: block;
+    max-width: 720px;
+    height: 58px;
+    padding: 1.125rem;
+    text-align: center;
+    background: var(--heading);
+    border-radius: 4px;
+    margin: 0 auto;
+    margin-top: 5.5rem;
+
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+
+    color: var(--background);
+  }
+}
